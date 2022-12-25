@@ -1,0 +1,118 @@
+{
+  "groups": {
+    "1": {
+      "1": {
+        "id": 1,
+        "name": "blue default",
+        "filename": "blue.jpg",
+        "answers": {
+          "weight": 2,
+          "count": 3
+        }
+      },
+      "2": {
+        "id": 2,
+        "name": "blue color ton",
+        "filename": "blue-color-ton.jpg",
+        "answers": {
+          "weight": 4,
+          "count": 3
+        }
+      },
+      "3": {
+        "id": 3,
+        "name": "blue saturation",
+        "filename": "blue-saturation.jpg",
+        "answers": {
+          "weight": 6,
+          "count": 3
+        }
+      },
+      "4": {
+        "id": 4,
+        "name": "blue lightness",
+        "filename": "blue-lightness.jpg",
+        "answers": {
+          "weight": 8,
+          "count": 3
+        }
+      }
+    },
+    "2": {
+      "1": {
+        "id": 1,
+        "name": "body default",
+        "filename": "body.jpg",
+        "answers": {
+          "weight": 3,
+          "count": 3
+        }
+      },
+      "2": {
+        "id": 2,
+        "name": "body color ton",
+        "filename": "body-color-ton.jpg",
+        "answers": {
+          "weight": 3,
+          "count": 3
+        }
+      },
+      "3": {
+        "id": 3,
+        "name": "body saturation",
+        "filename": "body-saturation.jpg",
+        "answers": {
+          "weight": 6,
+          "count": 3
+        }
+      },
+      "4": {
+        "id": 4,
+        "name": "body lightness",
+        "filename": "body-lightness.jpg",
+        "answers": {
+          "weight": 8,
+          "count": 3
+        }
+      }
+    },
+    "3": {
+      "1": {
+        "id": 1,
+        "name": "green default",
+        "filename": "green.jpg",
+        "answers": {
+          "weight": 3,
+          "count": 3
+        }
+      },
+      "2": {
+        "id": 2,
+        "name": "green color ton",
+        "filename": "green-color-ton.jpg",
+        "answers": {
+          "weight": 6,
+          "count": 3
+        }
+      },
+      "3": {
+        "id": 3,
+        "name": "green saturation",
+        "filename": "green-saturation.jpg",
+        "answers": {
+          "weight": 4,
+          "count": 3
+        }
+      },
+      "4": {
+        "id": 4,
+        "name": "green lightness",
+        "filename": "green-lightness.jpg",
+        "answers": {
+          "weight": 7,
+          "count": 3
+        }
+      }
+    }
+  }
+}
