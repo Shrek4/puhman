@@ -4,28 +4,25 @@
       "1": {
         "id": 1,
         "name": "body ton",
-        "filename": "1 тон.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 14,
+          "count": 7
         }
       },
       "2": {
         "id": 2,
         "name": "body saturation",
-        "filename": "1 насыщенность.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 7,
+          "count": 7
         }
       },
       "3": {
         "id": 3,
         "name": "body lightness",
-        "filename": "1 яркость.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 21,
+          "count": 7
         }
       }
     },
@@ -33,28 +30,25 @@
       "1": {
         "id": 1,
         "name": "green ton",
-        "filename": "2 тон.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 8,
+          "count": 7
         }
       },
       "2": {
         "id": 2,
         "name": "green saturation",
-        "filename": "2 насыщенность.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 13,
+          "count": 7
         }
       },
       "3": {
         "id": 3,
         "name": "green lightness",
-        "filename": "2 яркость.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 21,
+          "count": 7
         }
       }
     },
@@ -62,28 +56,25 @@
       "1": {
         "id": 1,
         "name": "blue ton",
-        "filename": "3 тон.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 8,
+          "count": 7
         }
       },
       "2": {
         "id": 2,
         "name": "blue saturation",
-        "filename": "3 насыщенность.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 13,
+          "count": 7
         }
       },
       "3": {
         "id": 3,
         "name": "blue lightness",
-        "filename": "3 яркость.jpg",
         "answers": {
-          "weight": 0,
-          "count": 0
+          "weight": 21,
+          "count": 7
         }
       }
     }

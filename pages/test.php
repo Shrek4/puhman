@@ -22,28 +22,31 @@ function add_user_answer($question, $img1, $img2, $img3){
     ];
 }
 
-function print_answers($question_id)
+function print_answers($question)
 {
-    global $question;
-
+    $json_data = json_decode(file_get_contents('../images.json'),true);
+    $count=intval($json_data['groups']['1']['1']['answers']['count']);
+    if($count>3){
+        $count=3;
+    }
     if($question<=3){
         ?>
                 <div class="card" style="width: 40rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> тон.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$count.'/'.$question; ?> тон.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cock" name="img1">
+                        <input class="form-control" list="cock" name="img1">
                     </div>
                 </div>
                 <div class="card" style="width: 40rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> насыщенность.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$count.'/'.$question; ?> насыщенность.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cock" name="img2">
+                        <input class="form-control" list="cock" name="img2">
                     </div>
                 </div>
                 <div class="card" style="width: 40rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> яркость.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$count.'/'.$question; ?> яркость.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cock" name="img3">
+                        <input class="form-control" list="cock" name="img3">
                     </div>
                 <datalist id="cock">
                     <option>1</option>
@@ -90,7 +93,7 @@ function print_answers($question_id)
                 ?>
             </div>
         </form>
-        <?php print_r($_SESSION) ?>
+
     </div>
 </body>
 <script src="test.js"></script>

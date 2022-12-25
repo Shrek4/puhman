@@ -6,6 +6,7 @@ session_start();
 
 function pushDataJson($data){
     $json_data = json_decode(file_get_contents('../images.json'),true);
+
     foreach($data as $answer){
         $json_data['groups'][$answer['question']]['1']['answers']['weight']+=intval($answer['img1']);
         $json_data['groups'][$answer['question']]['2']['answers']['weight']+=intval($answer['img2']);
@@ -17,7 +18,20 @@ function pushDataJson($data){
     }
     file_put_contents('../images.json', json_encode($json_data));
 }
-pushDataJson($_SESSION['answers'])
+pushDataJson($_SESSION['answers']);
+
+function showResults(){
+    $json_data = json_decode(file_get_contents('../images.json'),true);
+    foreach($json_data['groups'] as $group){
+        ?><ul><?php
+        foreach($group as $item){
+            ?><li><?php
+                echo "Объект: ".$item["name"]."; Сумма рангов: ".$item["answers"]["weight"]."; Количество ответов: ".$item["answers"]["count"];
+            ?></li><?php
+        }
+        ?></ul><?php
+    }
+}
 ?>
 
 
@@ -44,7 +58,8 @@ pushDataJson($_SESSION['answers'])
         <div class="result">
             <p class="titleResult">результат:</p>
             <br>
-            <?php print_r($_SESSION)?>
+            <?php showResults()?>
+
         </div>
     </div>
 </body>
