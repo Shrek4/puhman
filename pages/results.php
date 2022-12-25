@@ -10,12 +10,10 @@ function pushDataJson($data){
         $json_data['groups'][$answer['question']]['1']['answers']['weight']+=intval($answer['img1']);
         $json_data['groups'][$answer['question']]['2']['answers']['weight']+=intval($answer['img2']);
         $json_data['groups'][$answer['question']]['3']['answers']['weight']+=intval($answer['img3']);
-        $json_data['groups'][$answer['question']]['4']['answers']['weight']+=intval($answer['img4']);
 
         $json_data['groups'][$answer['question']]['1']['answers']['count']+=1;
         $json_data['groups'][$answer['question']]['2']['answers']['count']+=1;
         $json_data['groups'][$answer['question']]['3']['answers']['count']+=1;
-        $json_data['groups'][$answer['question']]['4']['answers']['count']+=1;
     }
     file_put_contents('../images.json', json_encode($json_data));
 }

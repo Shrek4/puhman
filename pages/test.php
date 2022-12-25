@@ -10,15 +10,14 @@ $questions = json_decode($temp, true);
 $question = $_GET['question'] ?? null;
 
 if ($question != 1) {
-    add_user_answer($question-1, $_GET['img1'], $_GET['img2'], $_GET['img3'], $_GET['img4']);
+    add_user_answer($question-1, $_GET['img1'], $_GET['img2'], $_GET['img3']);
 }
 
-function add_user_answer($question, $img1, $img2, $img3, $img4){
+function add_user_answer($question, $img1, $img2, $img3){
     $_SESSION['answers'][] = [
         'img1' => $img1,
         'img2' => $img2,
         'img3' => $img3,
-        'img4' => $img4,
         'question' => $question
     ];
 }
@@ -29,40 +28,31 @@ function print_answers($question_id)
 
     if($question<=3){
         ?>
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?>.jpg" alt="Card image cap">
+                <div class="card" style="width: 40rem;">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> тон.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cocktail" name="img1">
+                        <input class="form-check-input" list="cock" name="img1">
                     </div>
                 </div>
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?>.jpg" alt="Card image cap">
+                <div class="card" style="width: 40rem;">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> насыщенность.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cocktail" name="img2">
+                        <input class="form-check-input" list="cock" name="img2">
                     </div>
                 </div>
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?>.jpg" alt="Card image cap">
+                <div class="card" style="width: 40rem;">
+                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?> яркость.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <input class="form-check-input" list="cocktail" name="img3">
+                        <input class="form-check-input" list="cock" name="img3">
                     </div>
-                </div>
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="../images/<?php echo $question.'/'.$question; ?>.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <input class="form-check-input" list="cocktail" name="img4">
-                    </div>
-                </div>
-                <datalist id="cocktail">
+                <datalist id="cock">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
-                    <option>4</option>
                 </datalist>
                 <button type="submit" class="btn btn-primary">Далее</button>
                 <?php 
     }
-
                 else{
                     ?><button type="button" onClick='location.href="results.php"' class="btn btn-primary">Готово</button> <?php
                 }

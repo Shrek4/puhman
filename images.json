@@ -3,114 +3,87 @@
     "1": {
       "1": {
         "id": 1,
-        "name": "blue default",
-        "filename": "blue.jpg",
+        "name": "body ton",
+        "filename": "1 тон.jpg",
         "answers": {
-          "weight": 2,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "2": {
         "id": 2,
-        "name": "blue color ton",
-        "filename": "blue-color-ton.jpg",
+        "name": "body saturation",
+        "filename": "1 насыщенность.jpg",
         "answers": {
-          "weight": 4,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "3": {
         "id": 3,
-        "name": "blue saturation",
-        "filename": "blue-saturation.jpg",
+        "name": "body lightness",
+        "filename": "1 яркость.jpg",
         "answers": {
-          "weight": 6,
-          "count": 3
-        }
-      },
-      "4": {
-        "id": 4,
-        "name": "blue lightness",
-        "filename": "blue-lightness.jpg",
-        "answers": {
-          "weight": 8,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       }
     },
     "2": {
       "1": {
         "id": 1,
-        "name": "body default",
-        "filename": "body.jpg",
+        "name": "green ton",
+        "filename": "2 тон.jpg",
         "answers": {
-          "weight": 3,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "2": {
         "id": 2,
-        "name": "body color ton",
-        "filename": "body-color-ton.jpg",
+        "name": "green saturation",
+        "filename": "2 насыщенность.jpg",
         "answers": {
-          "weight": 3,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "3": {
         "id": 3,
-        "name": "body saturation",
-        "filename": "body-saturation.jpg",
+        "name": "green lightness",
+        "filename": "2 яркость.jpg",
         "answers": {
-          "weight": 6,
-          "count": 3
-        }
-      },
-      "4": {
-        "id": 4,
-        "name": "body lightness",
-        "filename": "body-lightness.jpg",
-        "answers": {
-          "weight": 8,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       }
     },
     "3": {
       "1": {
         "id": 1,
-        "name": "green default",
-        "filename": "green.jpg",
+        "name": "blue ton",
+        "filename": "3 тон.jpg",
         "answers": {
-          "weight": 3,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "2": {
         "id": 2,
-        "name": "green color ton",
-        "filename": "green-color-ton.jpg",
+        "name": "blue saturation",
+        "filename": "3 насыщенность.jpg",
         "answers": {
-          "weight": 6,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       },
       "3": {
         "id": 3,
-        "name": "green saturation",
-        "filename": "green-saturation.jpg",
+        "name": "blue lightness",
+        "filename": "3 яркость.jpg",
         "answers": {
-          "weight": 4,
-          "count": 3
-        }
-      },
-      "4": {
-        "id": 4,
-        "name": "green lightness",
-        "filename": "green-lightness.jpg",
-        "answers": {
-          "weight": 7,
-          "count": 3
+          "weight": 0,
+          "count": 0
         }
       }
     }
