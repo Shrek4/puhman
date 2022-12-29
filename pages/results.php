@@ -2,36 +2,44 @@
 require "../config.php";
 session_start();
 
-
+$w=0;
 
 function pushDataJson($data){
     $json_data = json_decode(file_get_contents('../images.json'),true);
 
     foreach($data as $answer){
-        $json_data['groups'][$answer['question']]['1']['answers']['weight']+=intval($answer['img1']);
-        $json_data['groups'][$answer['question']]['2']['answers']['weight']+=intval($answer['img2']);
-        $json_data['groups'][$answer['question']]['3']['answers']['weight']+=intval($answer['img3']);
+        $json_data['groups'][$answer['question']][$answer['quality']*3-2]['answers']['weight']+=intval($answer['img1']);
+        $json_data['groups'][$answer['question']][$answer['quality']*3-1]['answers']['weight']+=intval($answer['img2']);
+        $json_data['groups'][$answer['question']][$answer['quality']*3]['answers']['weight']+=intval($answer['img3']);
 
-        $json_data['groups'][$answer['question']]['1']['answers']['count']+=1;
-        $json_data['groups'][$answer['question']]['2']['answers']['count']+=1;
-        $json_data['groups'][$answer['question']]['3']['answers']['count']+=1;
+        $json_data['groups'][$answer['question']][$answer['quality']*3-2]['answers']['count']+=1;
+        $json_data['groups'][$answer['question']][$answer['quality']*3-1]['answers']['count']+=1;
+        $json_data['groups'][$answer['question']][$answer['quality']*3]['answers']['count']+=1;
     }
     file_put_contents('../images.json', json_encode($json_data));
 }
 pushDataJson($_SESSION['answers']);
 
 function showResults(){
+    global $w;
     $json_data = json_decode(file_get_contents('../images.json'),true);
+    $sum_rank=0;
+    $sum_count=0;
+
     foreach($json_data['groups'] as $group){
         ?><ul><?php
         foreach($group as $item){
             ?><li><?php
-                echo "Объект: ".$item["name"]."; Сумма рангов: ".$item["answers"]["weight"]."; Количество ответов: ".$item["answers"]["count"];
+                echo "Объект: ".$item["name"]."; Качество: ".$item["quality"]."; Сумма рангов: ".$item["answers"]["weight"]."; Количество ответов: ".$item["answers"]["count"];
+                $sum_rank+=$item["answers"]["weight"];
+                $sum_count+=$item["answers"]["count"];
             ?></li><?php
         }
         ?></ul><?php
     }
+    $w=$sum_count/$sum_rank/pi()*5;
 }
+
 ?>
 
 
@@ -58,7 +66,7 @@ function showResults(){
         <div class="result">
             <p class="titleResult">результат:</p>
             <br>
-            <?php showResults()?>
+            <?php showResults();?>
 
         </div>
     </div>

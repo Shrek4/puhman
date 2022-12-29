@@ -20,7 +20,7 @@ session_unset();
     <h1>какая-то лаба</h1>
     <div class="main-block">
 
-        <button type="button" class="btn btn-primary btn-lg" onClick='location.href="pages/test.php?question=1"'>Начать тест</button>
+        <button type="button" class="btn btn-primary btn-lg" onClick='location.href="pages/test.php?question=1&period=1"'>Начать тест</button>
     </div>
 
 </body>
